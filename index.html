@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Astana IT University</title>
+</head>
+<body>
+<h2>Hello World!</h2>
+</body>
+</html>
+
+//9
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Astana IT University</title>
+</head>
+<body>
+<h2>Hello Students!</h2>
+</body>
+</html>
+
+//10
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Astana IT University</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="message"></div>
+<p>
+Enter name: <br />
+<input name="username" id="username" />
+</p>
+<p>
+Enter age: <br />
+<input name="usage" id="usage" type="number" />
+</p>
+<button on click="send()">Send</button>
+<script>
+async function send(){
+
+const username = document.getElementById("username").value;
+const userage = document.getElementById("userage").value;
+
+const response = await fetch("/hello", {
+method: "POST",
+headers: { "Accept": "application/json", "Content-Type": "application/json" },
+body: JSON.stringify({
+name: username,
+age: userage
+})
+});
+if (response.ok) {
+const data = await response.json();
+document.getElementById("message").textContent = data.message;
+}
+else
+console log(response);
+}
+</script>
+</body>
+</html>
+
+//11
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Astana IT university</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="message"></div>
+<p>
+    Enter name: <br />
+<input name="username" id="username" />
+</p>
+<p>
+    Enter age: <br />
+<input name="usage" id="usage" type="number" />
+</p>
+<button on click="send()">Send</button>
+<script>
+async function send(){
+const username = document.getElementById("username").value;
+const userage = document.getElementById("userage").value;
+const response = await fetch("/hello", {
+method: "POST",
+headers: { "Accept": "application/json", "Content-Type": "application/json" },
+body: JSON.stringify({
+name: username,
+age: userage
+})
+});
+if (response.ok) {
+const data = await response.json();
+document.getElementById("message").textContent = data.message;
+}
+else
+console log(response);
+}
+</script>
+</body>
+</html>
